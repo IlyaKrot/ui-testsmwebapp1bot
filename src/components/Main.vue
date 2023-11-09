@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <h1>Эта вабще классное прилажене</h1>
     <h1>{{ user }}</h1>
   </div>
 </template>
@@ -13,8 +14,12 @@ export default {
   name: 'Main',
   data () {
     return {
-      user: tg.initDataUnsafe.user
+      user: null
     }
+  },
+  mounted () {
+    this.user = tg.initDataUnsafe.user
+    console.log(this.user)
   }
 }
 </script>
